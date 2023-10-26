@@ -3,32 +3,13 @@
 #define EPSILON 0.001
 #define MACRO 10
 
-double testpoint(double avgx1,double avgy1,double avgx2,double avgy2){
-    double x,y;
-    int check;
-    do
-    {
-        check = scanf("%lf %lf", &x, &y);
-        if (check != 2)
-        {
-            return 0;
-        }
-        //the statement compares distances
-        if (sqrt(pow(y - avgy1, 2) + pow(x - avgx1, 2)) < sqrt(pow(y - avgy2, 2) + pow(x - avgx2, 2)))
-        {
-            printf("class 1, distance = %.1lf \n", sqrt(pow(y - avgy1, 2) + pow(x - avgx1, 2)));
-        }
-        else
-        {
-            printf("class 2, distance = %.1lf \n", sqrt(pow(y - avgy2, 2) + pow(x - avgx2, 2)));
-        }
-    } while (check == 2);
-}
+void testpoint(double avgx1, double avgy1, double avgx2, double avgy2);
+
 int main(){
     int i,j;
-    double x,y,sumx,sumy;
-    double avgx1,avgy1,avgx2,avgy2;
-    double midx,midy,slope;
+    double x, y, sumx = 0.0, sumy = 0.0;
+    double avgx1 = 0.0, avgy1 = 0.0, avgx2 = 0.0, avgy2 = 0.0;
+    double midx, midy, slope;
 
     //user enters point coordinates for class 1
     for (i = 0; i < MACRO; i++)
@@ -71,4 +52,26 @@ int main(){
 
     return 0;
 
+}
+void testpoint(double avgx1, double avgy1, double avgx2, double avgy2)
+{
+    double x, y;
+    int check;
+    do
+    {
+        check = scanf("%lf %lf", &x, &y);
+        if (check != 2)
+        {
+            break;
+        }
+        // the statement compares distances
+        if (sqrt(pow(y - avgy1, 2) + pow(x - avgx1, 2)) < sqrt(pow(y - avgy2, 2) + pow(x - avgx2, 2)))
+        {
+            printf("class 1, distance = %.1lf \n", sqrt(pow(y - avgy1, 2) + pow(x - avgx1, 2)));
+        }
+        else
+        {
+            printf("class 2, distance = %.1lf \n", sqrt(pow(y - avgy2, 2) + pow(x - avgx2, 2)));
+        }
+    } while (check == 2);
 }
