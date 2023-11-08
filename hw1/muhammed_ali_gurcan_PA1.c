@@ -39,11 +39,11 @@ int main(){
     midy=(avgy1 + avgy2) / 2;
 
     //if divider is zero ,adds epsilon
-    if(avgy1-avgy2!=0){
+    if(avgy1!=avgy2){
         slope = -1/((avgy1 - avgy2) / (avgx1 - avgx2)) ;
     }
     else{
-        slope = -1 / ((avgy1 - avgy2+EPSILON) / ((avgx1 - avgx2)));
+        slope = -1 / ((EPSILON) / ((avgx1 - avgx2)));
     }
     printf("midpoint = %.1lf %.1lf\n", midx, midy);
     printf("separating line slope = %.1lf\n", slope);
