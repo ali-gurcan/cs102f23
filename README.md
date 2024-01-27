@@ -1,7 +1,8 @@
+# C Programming
 <p align="center">
 <img src="others/c_logo.png" />
 </p>
-
+# Homeworks
 | #      | TITLE                                                                                                | MAIN FOCUS                                                            |
 | ------ | -----------------------------------------------------------------------------------------------------| --------------------------------------------------------------------- |
 | **1**  | **[Homework I ](https://github.com/ali-gurcan/cs102f23/blob/main/hw1/PA1.pdf)**                      | Introduction,Operators                                                |        
