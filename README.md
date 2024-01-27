@@ -1,5 +1,5 @@
 <p align="center">
-<img src="other/c_logo.png" />
+<img src="others/c_logo.png" />
 </p>
 
 | #      | TITLE                                                                                                                                               | MAIN FOCUS                                   |
